@@ -558,8 +558,8 @@ public class KasebProvider extends ContentProvider {
                 retCursor = mOpenHelper.getReadableDatabase().query(
                         KasebContract.DetailSale.TABLE_NAME,
                         projection,
-                        selection,
-                        null,
+                        KasebContract.DetailSale.COLUMN_IS_BALANCED + " = ?",
+                        new String[]{isBalancedId},
                         null,
                         null,
                         sortOrder

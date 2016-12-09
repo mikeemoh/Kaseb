@@ -1,6 +1,5 @@
 package mjkarbasian.moshtarimadar;
 
-import android.app.Dialog;
 import android.content.ContentValues;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +10,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -59,6 +57,7 @@ public class ProductInsert extends Fragment {
         quantity = (EditText) rootView.findViewById(R.id.input_quantity);
         salePrice = (EditText) rootView.findViewById(R.id.input_sale_price);
         buyDate = (EditText) rootView.findViewById(R.id.input_buy_date);
+        buyDate.setText(Utility.preInsertDate(getActivity()));
 //        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 //        unit.setAdapter(adapter);
 

@@ -50,6 +50,7 @@ public class CostInsert extends Fragment {
         costCode = (EditText) rootView.findViewById(R.id.input_cost_code);
         costAmount = (EditText) rootView.findViewById(R.id.input_cost_amount);
         costDate = (EditText) rootView.findViewById(R.id.input_cost_date);
+        costDate.setText(Utility.preInsertDate(getActivity()));
         costDescription = (EditText) rootView.findViewById(R.id.input_cost_description);
 
         Cursor cursor = getContext().getContentResolver().query(KasebContract.CostTypes.CONTENT_URI

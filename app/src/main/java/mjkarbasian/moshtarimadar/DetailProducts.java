@@ -96,6 +96,7 @@ public class DetailProducts extends Fragment implements LoaderManager.LoaderCall
                 quantity = (EditText) dialog.findViewById(R.id.add_product_history_quantity);
                 salePrice = (EditText) dialog.findViewById(R.id.add_product_history_sale_price);
                 buyDate = (EditText) dialog.findViewById(R.id.add_product_history_buy_date);
+                buyDate.setText(Utility.preInsertDate(getActivity()));
 
                 Button dialogButton = (Button) dialog.findViewById(R.id.add_product_history_button1);
 

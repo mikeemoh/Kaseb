@@ -19,6 +19,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+import io.github.meness.roozh.Roozh;
+import io.github.meness.roozh.RoozhLocale;
 import mjkarbasian.moshtarimadar.Data.KasebContract;
 import mjkarbasian.moshtarimadar.R;
 
@@ -567,4 +569,20 @@ public class Utility {
         }
     }
 
+    public static String preInsertDate(Context context) {
+
+        Roozh persianCalendar = Roozh.getInstance(RoozhLocale.PERSIAN);
+        Calendar calendar = Calendar.getInstance();
+        Date date = calendar.getTime();
+        Roozh pCalendar = persianCalendar.gregorianToPersian(date.getTime());
+        int pYear = pCalendar.getYear();
+        int pMonth = pCalendar.getMonth();
+        int pDay = pCalendar.getDayOfMonth();
+        String pDate = Integer.toString(pYear) + "/" + Integer.toString(pMonth) + "/" + Integer.toString(pDay);
+        if (!getLocale(context).equals("IR")) {
+           return formatDate(calendar);
+        } else {
+            return pDate;
+        }
+    }
 }

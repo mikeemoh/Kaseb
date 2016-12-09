@@ -94,7 +94,7 @@ public class CustomerInsert extends Fragment {
         addressCity = (EditText) rootView.findViewById(R.id.input_address_city);
         addressStreet = (EditText) rootView.findViewById(R.id.input_address_street);
         addressPostalCode = (EditText) rootView.findViewById(R.id.input_address_postal_code);
-
+        birthDay.setText(Utility.preInsertDate(getActivity()));
         Cursor cursor = getContext().getContentResolver().query(KasebContract.State.CONTENT_URI
                 , null, null, null, null);
 

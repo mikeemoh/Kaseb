@@ -448,6 +448,7 @@ public class DetailSaleInsert extends AppCompatActivity {
 
                                 paymentAmount = (EditText) dialog.findViewById(R.id.add_payment_for_sale_text1);
                                 paymentDueDate = (EditText) dialog.findViewById(R.id.input_buy_date);
+                                paymentDueDate.setText(Utility.preInsertDate(mContext));
 
                                 paymentMethod = (Spinner) dialog.findViewById(R.id.input_payment_method_spinner);
                                 cursor = getContentResolver().query(KasebContract.PaymentMethods.CONTENT_URI
