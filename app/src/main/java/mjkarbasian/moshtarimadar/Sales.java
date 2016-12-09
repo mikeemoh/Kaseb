@@ -37,6 +37,12 @@ public class Sales extends DrawerActivity {
     }
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        this.finish();
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         setIntent(intent);
         handleIntent(intent);

@@ -21,6 +21,12 @@ public class Costs extends DrawerActivity {
     private String mQuery;
 
     @Override
+    protected void onStop() {
+        super.onStop();
+        this.finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

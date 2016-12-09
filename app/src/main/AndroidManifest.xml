@@ -23,7 +23,11 @@
         <activity
             android:name=".DetailSaleInsert"
             android:label="@string/title_activity_detail_sale"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="mjkarbasian.moshtarimadar.Customers" />
+        </activity>
 
         <activity
             android:name=".Customers"
@@ -124,7 +128,6 @@
             android:label="@string/title_activity_detail_sale"
             android:parentActivityName=".Sales"
             android:theme="@style/AppTheme.NoActionBar">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="mjkarbasian.moshtarimadar.Sales" />
@@ -146,9 +149,6 @@
             android:enabled="true"
             android:exported="true"
             android:permission="com.myApp.LICENSE_TO_KILL"></provider>
-
-        android:permission="com.myApp.LICENSE_TO_KILL" />
-
         <activity
             android:name=".MySetting"
             android:label="@string/title_activity_my_setting"
